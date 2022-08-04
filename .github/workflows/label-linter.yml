@@ -1,9 +1,12 @@
 name: "Lint Labels"
 
-on: [pull_request]
+on: [pull_request_target]
 
 jobs:
   label-linter:
+    permissions:
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       -
